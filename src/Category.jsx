@@ -6,11 +6,32 @@ class Category extends React.Component{
 
     componentDidMount(){
         // API call(msg bhejna => get)
-        fetch("/genre").then(function(res){
-            return res.json()
-        }).then((json)=>{
-            this.setState({allGenre:json})
-        })
+        let data = require("./data.json") ;
+
+        let uniqueGenreObjects = []
+        let newData = data.map((e)=>{
+            let flag = 0 ;
+            if(uniqueGenreObjects.length > 0){
+                uniqueGenreObjects.forEach((el)=>{
+                    if(el._id == e.genre._id){
+                        flag = 1;
+                    }
+                });
+                if(flag == 0){
+                    uniqueGenreObjects.push(e.genre) ;
+                }
+            }else{
+                uniqueGenreObjects.push(e.genre) ;
+            }
+        });
+        
+        this.setState({allGenre:uniqueGenreObjects}) ;
+
+        // fetch("/genre").then(function(res){
+        //     return res.json()
+        // }).then((json)=>{
+        //     this.setState({allGenre:json})
+        // })
     }
 
     render(){

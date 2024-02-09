@@ -7,18 +7,22 @@ class Table extends React.Component {
     }
 
     componentDidMount() {
-        fetch("/movies").then(function (res) {
-            return res.json()
-        }).then((json) => {
-            this.setState({ allMovies: json })
-            this.props.sendData(json.length)
-        })
+        let data = require("./data.json") ;
+        this.setState({allMovies:data});
+        this.props.sendData(data.length);
+        // fetch("/movies").then(function (res) {
+        //     return res.json()
+        // }).then((json) => {
+        //     this.setState({ allMovies: json })
+        //     this.props.sendData(json.length)
+        // })
     }
 
     render() {
         let moviesToDisplay = {}
         
         if(this.props.currGenre != "All Genres"){
+            this.state.currPage = 1
             moviesToDisplay = this.state.allMovies.filter((el)=>{
                 return el.genre.name == this.props.currGenre;
             });
