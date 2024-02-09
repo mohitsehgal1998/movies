@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/mohitsehgal1998/movies-frontend/static/js/main.53acf561.js",
-    "index.html": "/mohitsehgal1998/movies-frontend/index.html",
-    "main.53acf561.js.map": "/mohitsehgal1998/movies-frontend/static/js/main.53acf561.js.map"
+    "main.js": "/movies-frontend/static/js/main.53acf561.js",
+    "index.html": "/movies-frontend/index.html",
+    "main.53acf561.js.map": "/movies-frontend/static/js/main.53acf561.js.map"
   },
   "entrypoints": [
     "static/js/main.53acf561.js"
