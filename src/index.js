@@ -15,7 +15,7 @@ ReactDOM.render(
             <Route path="/customers" element={<Customers />} />
             <Route path="/rentals" element={<Rentals />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/" element={<App />} />
+            <Route path="/movies" element={<App />} />
         </Routes>
     </Router>
 
