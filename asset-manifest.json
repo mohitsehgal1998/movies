@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/movies-frontend/static/js/main.145fd640.js",
-    "index.html": "/movies-frontend/index.html",
-    "main.145fd640.js.map": "/movies-frontend/static/js/main.145fd640.js.map"
+    "main.js": "/movies/static/js/main.145fd640.js",
+    "index.html": "/movies/index.html",
+    "main.145fd640.js.map": "/movies/static/js/main.145fd640.js.map"
   },
   "entrypoints": [
     "static/js/main.145fd640.js"
